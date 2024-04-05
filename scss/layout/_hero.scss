@@ -1,0 +1,347 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.hero__inner {
+  min-width: 232px;
+  height: auto;
+  background-image: url("../../images/main.coffeemb.png");
+  @include mix.background;
+  background-position: top center;
+  text-align: center;
+  color: var.$main-two-text-color;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  padding-inline: 24px;
+  margin: 0 auto;
+}
+.hero__title {
+  @include mix.margintopadding;
+  font-family: var.$fonts-fraunces;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+.hero__paragrph {
+  @include mix.margintopadding;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 80%;
+}
+
+// SECTION OUR COMMITMENT
+.site-commitment__inner {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  color: var.$main-three-text-color;
+  text-align: center;
+}
+
+.site-commitment__img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.commitment__title {
+  @include mix.margintopadding;
+  font-family: var.$fonts-fraunces;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 40px;
+  margin-top: 48px;
+}
+.commitment__paragrph {
+  @include mix.margintopadding;
+  width: 232px;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 30px;
+}
+// Uncompromising
+.site-uncompromising__inner {
+  background-color: var.$main-bg-sections-color;
+  min-width: 200px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 140px;
+  padding-inline: 24px;
+  padding-bottom: 41px;
+  color: var.$main-two-text-color;
+  text-align: center;
+}
+.uncompromising__img {
+  width: 100%;
+  max-width: 279px;
+  border-radius: 10px;
+  margin: 0 auto;
+  transform: translateY(-50px);
+}
+.uncompromising__title {
+  @include mix.margintopadding;
+  font-family: var.$fonts-fraunces;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.uncompromising__paragrph {
+  @include mix.margintopadding;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 80%;
+}
+
+// Our headquarters
+.headquarters__inner {
+  text-align: center;
+  color: var.$main-three-text-color;
+}
+.headquarters__title {
+  font-family: var.$fonts-fraunces;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  color: var.$main-one-text-color;
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+.headquarters__links {
+  @include mix.margintopadding;
+  list-style: none;
+  margin-bottom: 80px;
+}
+.headquarters__logo {
+  margin: 0 auto;
+}
+.headquarters-item__title {
+  @include mix.margintopadding;
+  font-family: var.$fonts-fraunces;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 32px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.headquarters__link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: none;
+  color: var.$main-three-text-color;
+  transition: all 0.4s ease;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var.$main-one-text-color;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 345px) {
+  .site-commitment__img {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .hero__title {
+    margin-bottom: 24px;
+  }
+  .hero__paragrph {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .commitment__paragrph {
+    width: 260px;
+  }
+  .site-uncompromising__img {
+    transform: translateY(-80px);
+  }
+  .uncompromising__title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .uncompromising__paragrph {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .uncompromising__img {
+    transform: translateY(-80px);
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .hero__inner {
+    background-image: url("../../images/coffeetb.jpg");
+    background-size: auto;
+    border-radius: 15px;
+    padding-block: 100px;
+  }
+  .site-commitment__img {
+    margin: 0 auto;
+    margin-top: 120px;
+  }
+  .commitment__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .commitment__paragrph {
+    width: 327px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .site-uncompromising__inner {
+    padding-bottom: 61px;
+  }
+  .uncompromising__title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .headquarters__title {
+    margin-top: 120px;
+    margin-bottom: 72px;
+  }
+  .headquarters-item__title {
+    margin-top: 47px;
+    margin-bottom: 22px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .hero__inner {
+    background-size: cover;
+    height: 400px;
+    padding-inline: 58px;
+    text-align: start;
+  }
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .hero__paragrph {
+    width: 398px;
+  }
+  .headquarters__wrapper {
+    @include mix.flex;
+    text-align: start;
+  }
+  .headquarters__links {
+    width: 223px;
+  }
+  .headquarters__title {
+    text-align: start;
+  }
+  .headquarters__logo {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .site-commitment__inner {
+    @include mix.flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 144px;
+    text-align: start;
+  }
+  .site-commitment__img {
+    margin: 0;
+  }
+  .commitment__title {
+    margin: 0;
+  }
+  .site-uncompromising__inner {
+    margin-top: 313px;
+    padding-bottom: 67px;
+  }
+  .uncompromising__img {
+    width: 100%;
+    max-width: 579px;
+    border-radius: 10px;
+    transform: translateY(-150px);
+  }
+  .uncompromising__title {
+    margin-top: -90px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .uncompromising__paragrph {
+    width: 540px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__inner {
+    background-image: url("../../images/coffeedc.jpg");
+    height: 450px;
+    padding-block: 118px;
+  }
+  .hero__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .hero__paragrph {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero__inner {
+    padding-block: 137px;
+    padding-inline: 85px;
+  }
+  .hero__paragrph {
+    width: 445px;
+  }
+  .site-commitment__inner {
+    margin-top: 168px;
+  }
+  .commitment__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .commitment__paragrph {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .site-commitment__inner {
+    justify-content: space-between;
+  }
+  .commitment__paragrph {
+    width: 538px;
+  }
+  .headquarters__wrapper {
+    column-gap: 95px;
+  }
+  .headquarters__links {
+    width: 285px;
+  }
+  .headquarters-item__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .site-uncompromising__inner {
+    @include mix.main-flex;
+    flex-direction: row-reverse;
+    margin-top: 256px;
+    padding: 0;
+    padding-inline: 85px;
+    text-align: start;
+  }
+  .uncompromising__img {
+    transform: translateY(-85px);
+  }
+  .uncompromising__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .uncompromising__paragrph {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

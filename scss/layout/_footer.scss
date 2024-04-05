@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.site-footer__inner {
+  min-width: 200px;
+  width: 100%;
+  padding-inline: 34px;
+  padding-block: 54px;
+  margin-bottom: 10px;
+  background-color: var.$main-bg-sections-color;
+}
+.site-footer__img {
+  min-width: 150px;
+  max-width: 236px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer__links {
+  @include mix.margintopadding;
+  list-style: none;
+  text-align: center;
+  margin-top: 48px;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.footer__link {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.92px;
+  color: var.$main-one-text-color;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  &:hover {
+    cursor: pointer;
+    color: var.$main-bg-color;
+  }
+}
+.foote-information__links {
+  @include mix.main-flex;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 48px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .footer__links {
+    @include mix.flex;
+    column-gap: 33px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .footer__item:not(:last-child) {
+    margin: 0;
+  }
+  .foote-information__links {
+    margin-top: 65px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .site-footer__inner {
+    @include mix.main-flex;
+    text-align: start;
+    margin-left: 0;
+    padding-block: 47px;
+    padding-inline: 85px;
+  }
+  .site-footer__box {
+    @include mix.flex;
+    column-gap: 102px;
+  }
+  .site-footer__img,
+  .foote-information__links,
+  .footer__links {
+    @include mix.margintopadding;
+  }
+}

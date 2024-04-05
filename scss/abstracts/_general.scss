@@ -1,0 +1,13 @@
+@use "./variables" as var;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: var.$fonts-barlow;
+  background-color: var.$main-bg-color;
+}
+img {
+  display: block;
+}
